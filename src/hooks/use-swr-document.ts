@@ -330,7 +330,7 @@ export const useDocument = <
    * - The second argument is the same as the second argument for [Firestore `set`](https://firebase.google.com/docs/firestore/manage-data/add-data#set_a_document).
    */
   const set = useCallback(
-    (data: Partial<AllowType<Data, FieldValue>>, options?: SetOptions) => {
+    (data: Partial<AllowType<Data, FieldValue>>, options: SetOptions) => {
       if (!listen) {
         // we only update the local cache if we don't have a listener set up
         // Why? firestore handles this for us for listeners.

@@ -30,7 +30,7 @@ const revalidateCollection = (path: string) => {
 const set = <Data extends object = {}, Doc extends Document = Document<Data>>(
   path: string | null,
   data: Partial<Data>,
-  options?: SetOptions,
+  options: SetOptions,
   /**
    * If true, the local cache won't be updated. Default `false`.
    */
